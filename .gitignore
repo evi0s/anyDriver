@@ -2,3 +2,5 @@
 node_modules
 dist/*
 .nyc_output
+src/test/anyDriver.bundle.js
+dist_webpack/*

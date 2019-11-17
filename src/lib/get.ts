@@ -1,18 +1,23 @@
-import { Object, StrArrays, ObjArrays, NumArrays, DataType } from "../dataTypes";
+import { StoreType, DataType, OperatorObject, Operator }  from "../dataTypes";
 
-function _get(data: DataType, key: string)
-    : string | number | Object | StrArrays | ObjArrays | NumArrays | boolean {
 
-    if (!(key in data)) {
-        return false;
+function _get(data: StoreType, key: string | OperatorObject)
+    : DataType | boolean {
+
+    if (typeof key === "string") {
+        if (!(key in data)) {
+            return false;
+        }
+
+        try {
+            return data[key];
+        } catch (err) {
+            console.error(err);
+            return false;
+        }
     }
 
-    try {
-        return data[key];
-    } catch (err) {
-        console.error(err);
-        return false;
-    }
+    // TODO: MongoDB like document query
 }
 
 export { _get };

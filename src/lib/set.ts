@@ -1,6 +1,6 @@
-import { Object, StrArrays, ObjArrays, NumArrays, DataType } from "../dataTypes";
+import { StoreType, DataType }  from "../dataTypes";
 
-function _set(data: DataType, key: string, value: string | number | Object | StrArrays | ObjArrays | NumArrays)
+function _set(data: StoreType, key: string, value: DataType)
     : boolean {
     try {
         data[key] = value;
