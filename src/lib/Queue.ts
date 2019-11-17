@@ -37,11 +37,12 @@ class Queue <T extends DataType> {
     }
 
     pop(): T | boolean {
-        let data: T;
 
         if(this.isEmpty()) {
             return false
         }
+
+        let data: T;
 
         data = this._queue[this._front];
         this._front = (this._front + 1) % this._capacity;

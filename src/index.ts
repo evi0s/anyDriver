@@ -1,6 +1,5 @@
-import { StoreType, DataType, OperatorObject } from "./dataTypes";
+import { StoreType, DataType, OperatorObjects, Queue, Stack } from "./dataTypes";
 import * as lib from './lib';
-import { Queue } from './lib/Queue';
 
 
 class anyDriver {
@@ -15,12 +14,13 @@ class anyDriver {
         return lib._set(this.data, key, value);
     }
 
-    public get(key: string | OperatorObject): DataType | boolean {
+    public get(key: string | OperatorObjects): DataType | boolean {
         return lib._get(this.data, key);
     }
 }
 
 export {
     anyDriver,
-    Queue
+    Queue,
+    Stack
 }

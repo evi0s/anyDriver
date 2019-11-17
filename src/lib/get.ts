@@ -1,7 +1,7 @@
-import { StoreType, DataType, OperatorObject, Operator }  from "../dataTypes";
+import { StoreType, DataType, OperatorObjects, Operator }  from "../dataTypes";
 
 
-function _get(data: StoreType, key: string | OperatorObject)
+function _get(data: StoreType, key: string | OperatorObjects)
     : DataType | boolean {
 
     if (typeof key === "string") {

@@ -1,22 +1,15 @@
 import { Queue } from './lib/Queue';
+import { Stack } from './lib/Stack';
 
-class Object {
+class Objects {
     [key: string]: string | number;
 }
 
-type NumArrays = {
-    [index: number]: number;
+type Arrays = {
+    [index: number]: string | number | Objects;
 }
 
-type StrArrays = {
-    [index: number]: string;
-}
-
-type ObjArrays = {
-    [index: number]: Object;
-}
-
-class Operator extends Object {
+class Operator extends Objects {
     $ne? : string | number;
     $lt? : string | number;
     $lte?: string | number;
@@ -24,27 +17,27 @@ class Operator extends Object {
     $gte?: string | number;
 }
 
-type OperatorObject = {
+type OperatorObjects = {
     [key: string]: string | Operator;
 }
 
 type BaseType =
-    string | number | Object | StrArrays | ObjArrays | NumArrays;
+    string | number | Objects | Arrays;
 
 type DataType =
-    BaseType | Queue<BaseType>;
+    BaseType | Queue<BaseType> | Stack<BaseType>;
 
 type StoreType = {
     [key: string]: DataType;
 }
 
 export {
-    Object,
-    NumArrays,
-    StrArrays,
-    ObjArrays,
+    Objects,
+    Arrays,
     Operator,
-    OperatorObject,
+    OperatorObjects,
     StoreType,
-    DataType
+    DataType,
+    Queue,
+    Stack
 }
