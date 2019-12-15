@@ -18,6 +18,7 @@ function _get(data: StoreType, key: string | OperatorObjects)
     }
 
     // TODO: MongoDB like document query
+    return false;
 }
 
 export { _get };
