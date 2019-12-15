@@ -1,7 +1,9 @@
 import { Objects } from "./Objects";
 
-type Arrays = {
-    [index: number]: string | number | Objects;
+type T = string | number | Objects;
+
+interface Arrays extends Array<T> {
+    [index: number]: T;
 }
 
 export { Arrays };
