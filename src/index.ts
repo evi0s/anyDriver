@@ -1,4 +1,4 @@
-import { StoreType, DataType, OperatorObjects, Queue, Stack } from "./dataTypes";
+import { StoreType, DataType, OperatorObjects } from "./dataTypes";
 import * as lib from './lib';
 
 
@@ -20,7 +20,5 @@ class anyDriver {
 }
 
 export {
-    anyDriver,
-    Queue,
-    Stack
+    anyDriver
 }

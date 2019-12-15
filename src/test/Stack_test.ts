@@ -1,4 +1,5 @@
-import { anyDriver, Stack } from "../index";
+import { anyDriver } from "../index";
+import { Stack } from "../dataTypes";
 import { expect } from 'chai';
 import 'mocha';
 

@@ -1,4 +1,5 @@
-import { anyDriver, Queue } from "../index";
+import { anyDriver } from "../index";
+import { Queue } from "../dataTypes";
 import { expect } from 'chai';
 import 'mocha';
 
